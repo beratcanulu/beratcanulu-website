@@ -1,0 +1,31 @@
+{
+  "name": "beratcanulu-website",
+  "version": "1.0.0",
+  "description": "Berat Canulu - Software Developer Personal Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "npm run build-css",
+    "build-css": "tailwindcss -i ./public/css/input.css -o ./public/css/output.css",
+    "vercel-build": "npm run build-css"
+  },
+  "keywords": [
+    "personal",
+    "website",
+    "software developer",
+    "portfolio"
+  ],
+  "author": "Berat Canulu",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "tailwindcss": "^3.3.5"
+  }
+}
