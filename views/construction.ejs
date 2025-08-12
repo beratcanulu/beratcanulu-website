@@ -67,126 +67,7 @@
             color: #2563eb;
         }
         
-        /* Admin Hamburger Bar */
-        .admin-hamburger {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            background: rgba(37, 99, 235, 0.1);
-            border: 1px solid rgba(37, 99, 235, 0.2);
-        }
 
-        .admin-hamburger:hover {
-            background: rgba(37, 99, 235, 0.2);
-            border-color: rgba(37, 99, 235, 0.4);
-        }
-
-        .admin-hamburger-btn {
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-        }
-
-        .admin-hamburger-btn span {
-            width: 20px;
-            height: 2px;
-            background: #2563eb;
-            border-radius: 1px;
-            transition: 0.3s;
-        }
-
-        .admin-label {
-            color: #2563eb;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* Admin Sidebar */
-        .admin-sidebar {
-            position: fixed;
-            top: 0;
-            left: -300px;
-            width: 300px;
-            height: 100vh;
-            background: white;
-            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
-            z-index: 2000;
-            transition: left 0.3s ease;
-            overflow-y: auto;
-        }
-
-        .admin-sidebar.active {
-            left: 0;
-        }
-
-        .admin-sidebar-header {
-            background: #1e3a8a;
-            color: white;
-            padding: 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .admin-sidebar-header h3 {
-            margin: 0;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .admin-sidebar-close {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.2rem;
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: 4px;
-            transition: background 0.3s ease;
-        }
-
-        .admin-sidebar-close:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .admin-sidebar-menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .admin-sidebar-menu li {
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .admin-sidebar-menu a {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem 1.5rem;
-            color: #374151;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .admin-sidebar-menu a:hover {
-            background: #f8fafc;
-            color: #2563eb;
-        }
-
-        .admin-sidebar-menu i {
-            width: 20px;
-            text-align: center;
-            color: #64748b;
-        }
-
-        .admin-sidebar-menu a:hover i {
-            color: #2563eb;
-        }
 
         /* Mobile Menu Button */
         .mobile-menu-btn {
@@ -896,15 +777,7 @@
         <div class="nav-container">
             <a href="#" class="logo">BERAT CAN ULU</a>
             
-            <!-- Admin Hamburger Bar (Hidden by default) -->
-            <div class="admin-hamburger" id="adminHamburger" style="display: none;">
-                <div class="admin-hamburger-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <span class="admin-label">Admin</span>
-            </div>
+
             
             <!-- Mobile Menu Button -->
             <div class="mobile-menu-btn">
@@ -920,21 +793,7 @@
         </div>
     </nav>
 
-    <!-- Admin Sidebar -->
-    <div class="admin-sidebar" id="adminSidebar">
-        <div class="admin-sidebar-header">
-            <h3>Admin Panel</h3>
-            <button class="admin-sidebar-close" id="adminSidebarClose">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="admin-sidebar-menu">
-            <li><a href="/admin-messages"><i class="fas fa-envelope"></i> Mesajlar</a></li>
-            <li><a href="/admin-settings"><i class="fas fa-cog"></i> Ayarlar</a></li>
-            <li><a href="/admin"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-            <li><a href="#" id="adminLogout"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a></li>
-        </ul>
-    </div>
+
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -1078,48 +937,7 @@
             }
         });
 
-        // Admin functionality
-        const adminHamburger = document.getElementById('adminHamburger');
-        const adminSidebar = document.getElementById('adminSidebar');
-        const adminSidebarClose = document.getElementById('adminSidebarClose');
-        const adminLogout = document.getElementById('adminLogout');
 
-        // Check if user is admin
-        function checkAdminStatus() {
-            const isAdmin = localStorage.getItem('adminLoggedIn');
-            if (isAdmin) {
-                adminHamburger.style.display = 'flex';
-            } else {
-                adminHamburger.style.display = 'none';
-                adminSidebar.classList.remove('active');
-            }
-        }
-
-        // Toggle admin sidebar
-        adminHamburger.addEventListener('click', function() {
-            adminSidebar.classList.toggle('active');
-        });
-
-        // Close admin sidebar
-        adminSidebarClose.addEventListener('click', function() {
-            adminSidebar.classList.remove('active');
-        });
-
-        // Admin logout
-        adminLogout.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            if (confirm('Çıkış yapmak istediğinizden emin misiniz?')) {
-                localStorage.removeItem('adminLoggedIn');
-                localStorage.removeItem('adminUsername');
-                adminHamburger.style.display = 'none';
-                adminSidebar.classList.remove('active');
-                alert('Başarıyla çıkış yapıldı!');
-            }
-        });
-
-        // Check admin status on page load
-        checkAdminStatus();
         
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

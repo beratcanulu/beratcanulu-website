@@ -25,21 +25,7 @@ app.get('/contact', (req, res) => {
     res.render('contact');
 });
 
-app.get('/admin', (req, res) => {
-    res.render('admin');
-});
 
-app.get('/admin-messages', (req, res) => {
-    res.render('admin-messages');
-});
-
-app.get('/admin-settings', (req, res) => {
-    res.render('admin-settings');
-});
-
-app.get('/login', (req, res) => {
-    res.render('login');
-});
 
 // Start server
 app.listen(PORT, () => {
