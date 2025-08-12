@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda - Berat Can Ulu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-top: 100px;
+            padding: 4rem 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #1e293b;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            color: #475569;
+            line-height: 1.8;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-image {
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #2563eb;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Berat Can Ulu</a>
+            <ul class="nav-links">
+                <li><a href="/about">Hakkımda</a></li>
+                <li><a href="/contact">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <h1 class="page-title">Hakkımda</h1>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Merhaba, ben Berat Can Ulu. Cumhuriyet Üniversitesi Bilgisayar Mühendisliği bölümünden 2025 yılında mezun oldum ve şu an heyecanla yazılım sektöründeki yolculuğuma devam ediyorum. Junior Software Developer olarak çalışıyor, öğrenmeye ve kendimi sürekli geliştirmeye büyük bir tutkuyla bağlıyım.
+                    </p>
+                    <p>
+                        Üniversite eğitimim boyunca edindiğim teorik bilgileri pratik projelerle birleştirerek takım çalışmasına uygun, çözüm odaklı bir geliştirici olma yolunda ilerliyorum. Yazılım dünyasının dinamik yapısı beni her zaman motive ediyor ve yeni teknolojileri öğrenmek için sürekli araştırma yapıyorum.
+                    </p>
+                    <p>
+                        Özellikle backend development alanında derinleşmek ve modern yazılım mimarileri üzerine uzmanlaşmak istiyorum. Açık kaynak projelere katkı sağlamak ve sektördeki gelişmeleri yakından takip etmek benim için büyük önem taşıyor.
+                    </p>
+                    <p>
+                        "Kod yazmak bir sanattır; sürekli pratik ve öğrenme ister." felsefesiyle hareket ediyor ve her projede kendimi bir adım daha ileriye taşımak için çaba gösteriyorum.
+                    </p>
+                    <p>
+                        Yeni fırsatlar ve iş birlikleri için benimle iletişime geçebilirsiniz!
+                    </p>
+                    
+                    <a href="/" class="back-btn">Ana Sayfaya Dön</a>
+                </div>
+                
+                <div class="about-image">
+                    <img src="/images/beratsite.jpg" alt="Berat Can Ulu" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
