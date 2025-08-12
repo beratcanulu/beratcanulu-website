@@ -25,6 +25,10 @@ app.get('/contact', (req, res) => {
     res.render('contact');
 });
 
+app.get('/admin', (req, res) => {
+    res.render('admin');
+});
+
 // Start server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
