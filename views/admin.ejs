@@ -234,6 +234,9 @@
         .back-to-site {
             text-align: center;
             margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
         }
 
         .back-to-site a {
@@ -252,6 +255,14 @@
         .back-to-site a:hover {
             background: #1e40af;
             transform: translateY(-2px);
+        }
+
+        .logout-btn {
+            background: #dc2626 !important;
+        }
+
+        .logout-btn:hover {
+            background: #b91c1c !important;
         }
 
         @media (max-width: 768px) {
@@ -407,6 +418,10 @@
                 <i class="fas fa-arrow-left"></i>
                 Siteye Dön
             </a>
+            <a href="#" class="logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                Çıkış Yap
+            </a>
         </div>
     </div>
 
@@ -445,6 +460,29 @@
                     }
                 }
             });
+        });
+
+        // Logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (confirm('Çıkış yapmak istediğinizden emin misiniz?')) {
+                // Clear admin session
+                localStorage.removeItem('adminLoggedIn');
+                localStorage.removeItem('adminUsername');
+                
+                // Redirect to login page
+                window.location.href = '/login';
+            }
+        });
+
+        // Check if user is logged in
+        window.addEventListener('load', function() {
+            const isLoggedIn = localStorage.getItem('adminLoggedIn');
+            if (!isLoggedIn) {
+                // Redirect to login if not authenticated
+                window.location.href = '/login';
+            }
         });
     </script>
 </body>
