@@ -196,6 +196,61 @@
             transform: translateY(-2px);
         }
         
+        /* Social Media Buttons */
+        .social-buttons {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .social-btn.github {
+            background: #24292e;
+        }
+        
+        .social-btn.github:hover {
+            background: #1a1e22;
+        }
+        
+        .social-btn.linkedin {
+            background: #0077b5;
+        }
+        
+        .social-btn.linkedin:hover {
+            background: #005885;
+        }
+        
+        .social-btn.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        
+        .social-btn.instagram:hover {
+            filter: brightness(1.1);
+        }
+        
+        .social-btn i {
+            font-size: 1.2rem;
+            width: 20px;
+            text-align: center;
+        }
+        
         @media (max-width: 768px) {
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -245,9 +300,20 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Antalya, Türkiye</span>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Cumhuriyet Üniversitesi - Bilgisayar Mühendisliği</span>
+                    
+                    <div class="social-buttons">
+                        <a href="https://github.com/beratcanulu" class="social-btn github" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/berat-can-ulu-5a668428a/" class="social-btn linkedin" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://instagram.com/beratcnulu" class="social-btn instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
                     </div>
                     
                     <a href="/" class="back-btn">Ana Sayfaya Dön</a>
