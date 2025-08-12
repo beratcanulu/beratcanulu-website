@@ -482,6 +482,106 @@
         .hero-content {
             animation: fadeInUp 1s ease-out;
         }
+        
+        /* Experience Section */
+        .experience {
+            padding: 6rem 0;
+            background: white;
+        }
+        
+        .experience-timeline {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            position: relative;
+        }
+        
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+            transform: translateX(-50%);
+        }
+        
+        .experience-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .experience-item:nth-child(odd) {
+            flex-direction: row;
+        }
+        
+        .experience-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .experience-date {
+            background: #2563eb;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .experience-content {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 0 2rem;
+            flex: 1;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+        
+        .experience-company {
+            font-size: 1.1rem;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .experience-description {
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .experience-timeline::before {
+                left: 20px;
+            }
+            
+            .experience-item {
+                flex-direction: column !important;
+                align-items: flex-start;
+                margin-left: 20px;
+            }
+            
+            .experience-date {
+                margin-bottom: 1rem;
+            }
+            
+            .experience-content {
+                margin: 0;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -491,6 +591,7 @@
             <a href="#" class="logo">Berat Can Ulu</a>
             <ul class="nav-links">
                 <li><a href="#about">Hakkımda</a></li>
+                <li><a href="#experience">Deneyim</a></li>
                 <li><a href="#contact">İletişim</a></li>
             </ul>
         </div>
@@ -537,7 +638,38 @@
         </div>
     </section>
 
-
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Deneyim</h2>
+            
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-date">2017 - 2025</div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Computer Engineering</h3>
+                        <p class="experience-company">Cumhuriyet Üniversitesi</p>
+                        <p class="experience-description">
+                            Bilgisayar Mühendisliği lisans eğitimi. Teorik ve pratik bilgileri 
+                            birleştirerek modern yazılım geliştirme tekniklerini öğrendim.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2025</div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Internship</h3>
+                        <p class="experience-company">Reset Bilgi Teknolojileri</p>
+                        <p class="experience-description">
+                            Yazılım geliştirme alanında staj deneyimi. Gerçek projelerde 
+                            çalışarak pratik deneyim kazandım.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
