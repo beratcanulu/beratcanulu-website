@@ -300,8 +300,8 @@
                     localStorage.setItem('adminLoggedIn', 'true');
                     localStorage.setItem('adminUsername', username);
                     
-                    // Redirect to admin panel
-                    window.location.href = '/admin';
+                    // Redirect to main page (not admin panel)
+                    window.location.href = '/';
                 }, 1000);
             } else {
                 showError(usernameInput, 'Kullanıcı adı veya şifre hatalı');
