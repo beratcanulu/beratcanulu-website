@@ -143,11 +143,63 @@
             50% { transform: translateY(-20px) rotate(180deg); }
         }
         
+        /* Site access styles */
+        .site-access {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            margin-top: 1.5rem;
+        }
+        
+        .site-access h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            color: white;
+        }
+        
+        .access-text {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+        
+        .access-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+        }
+        
+        .access-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.6);
+        }
+        
+        .access-button .arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .access-button:hover .arrow {
+            transform: translateX(5px);
+        }
+        
         @media (max-width: 768px) {
             .logo { font-size: 2.5rem; }
             .title { font-size: 2rem; }
             .subtitle { font-size: 1rem; }
             .construction-container { padding: 1rem; }
+            .access-button { padding: 0.75rem 1.5rem; font-size: 1rem; }
         }
     </style>
 </head>
@@ -182,6 +234,15 @@
                 <i>📍</i>
                 <span>Antalya, Türkiye</span>
             </div>
+        </div>
+        
+        <div class="site-access">
+            <h3>🚀 Site Erişimi</h3>
+            <p class="access-text">Geliştirme aşamasındaki siteyi görmek istiyorsanız:</p>
+            <a href="/main" class="access-button">
+                <span>🏠 Siteye Giriş Yap</span>
+                <i class="arrow">→</i>
+            </a>
         </div>
     </div>
 </body>
