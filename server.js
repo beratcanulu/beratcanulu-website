@@ -17,6 +17,10 @@ app.set('layout', 'layout');
 
 // Routes
 app.get('/', (req, res) => {
+    res.render('construction', { layout: false });
+});
+
+app.get('/main', (req, res) => {
     res.render('index', {
         title: 'Berat Can Ulu - Software Developer',
         name: 'Berat Can Ulu',
