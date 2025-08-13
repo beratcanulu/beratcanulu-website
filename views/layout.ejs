@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> - Berat Can Ulu</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/styles/main.css">
+    <% if (typeof pageCSS !== 'undefined' && pageCSS) { %>
+        <link rel="stylesheet" href="/css/styles/<%= pageCSS %>.css">
+    <% } %>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">BERAT CAN ULU</a>
+            
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="/about">Hakkımda</a></li>
+                <li><a href="/contact">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <%- body %>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>beratcanulu@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+90 553 587 30 99</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Antalya, Türkiye</span>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/beratcanulu" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/berat-can-ulu-5a668428a/" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://instagram.com/beratcnulu" class="social-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 Berat Can Ulu. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="/js/main.js"></script>
+</body>
+</html> 
